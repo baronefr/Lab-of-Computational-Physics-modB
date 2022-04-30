@@ -17,5 +17,5 @@ This repository contains the weekly exercises for the Laboratory of Computationa
 
 <p align="center">
   <img src="https://www.unipd.it/sites/unipd.it/themes/unipd_2017/logo-print.png" alt="" height="70"/>
-  <img src="http://physicsofdata.dfa.unipd.it/fileadmin/Immagini/Pagine/Logo-DFA.png" alt="" height="70"/>
+  <img src="http://physicsofdata.dfa.unipd.it/fileadmin/Immagini/Pagine/Logo-DFA.png" alt="" height="80"/>
 </p>

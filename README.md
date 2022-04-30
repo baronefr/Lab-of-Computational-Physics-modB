@@ -1,9 +1,12 @@
 <h1 align="center"> LCP module B </h1>
 <p align="center">
-  <img src="https://www.unipd.it/sites/unipd.it/themes/unipd_2017/logo-print.png" alt="unipd_logo" width="200"/>
+  <img src="https://www.unipd.it/sites/unipd.it/themes/unipd_2017/logo-print.png" alt="unipd" width="200"/>
 </p>
 <h4 align="center">repository by Francesco Pio Barone</h4>
-<p align="center"> Table of contents for Laboratory of Computational Physics, module B.</p>
+
+***
+
+### Table of contents for Laboratory of Computational Physics, module B
 
 
 - exr1 - gradient descend

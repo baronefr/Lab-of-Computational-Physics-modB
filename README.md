@@ -13,9 +13,9 @@ This repository contains the weekly exercises for the Laboratory of Computationa
 
 ***
 
-<h5 align="center">repository by Francesco Pio Barone</h5>
+<h6 align="center">repository by Francesco Pio Barone</h6>
 
 <p align="center">
-  <img src="https://www.unipd.it/sites/unipd.it/themes/unipd_2017/logo-print.png" alt="" height="40"/>
-  <img src="http://physicsofdata.dfa.unipd.it/fileadmin/Immagini/Pagine/Logo-DFA.png" alt="" height="40"/>
+  <img src="https://www.unipd.it/sites/unipd.it/themes/unipd_2017/logo-print.png" alt="" height="60"/>
+  <img src="http://physicsofdata.dfa.unipd.it/fileadmin/Immagini/Pagine/Logo-DFA.png" alt="" height="60"/>
 </p>

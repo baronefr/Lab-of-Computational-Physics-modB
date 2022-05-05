@@ -1,0 +1,54 @@
+\section{Impact of data rescaling and weight initialization}
+\label{sec:data_init}
+
+
+\paragraph{\textbf{Data rescaling - }}  % feature scaling ref: https://en.wikipedia.org/wiki/Feature_scaling
+
+We wish to analyze whether the rescaling of the features impacts on the final DNN accuracy. As usual, we selected a poll of rescaling functions \cite{web:feature_scaling} and performed multiple training iterations to pick the average validation accuracy for each configuration.
+
+\begin{table}[h]
+\begin{tabular}{ccc}
+\hline
+Method                        & Train acc. & Validation acc. \\ \hline
+no rescaling                  & 0.9231         & 0.9287              \\
+domain rescaling (x/50)       & 0.9337         & 0.9413              \\
+standardization               & 0.9262         & 0.9262              \\
+std. with stabilizer $\epsilon = 0.01$ & 0.9219         & 0.9237              \\
+std. with stabilizer $\epsilon = 0.1$  & 0.9241         & 0.9187              \\
+std. with stabilizer $\epsilon = 1$    & 0.9578         & 0.9588              \\
+std. with stabilizer $\epsilon = 10$   & 0.9825         & 0.9712              \\
+std. with stabilizer $\epsilon = 100$  & 0.9919         & 0.9950              \\
+std. with stabilizer $\epsilon = 1000$ & 0.9266         & 0.9250              \\
+min-max in $[0,1]$            & 0.9909         & 0.9962              \\
+min-max in $[-1,1]$           & 0.9266         & 0.9275              \\ \hline
+\end{tabular}
+\caption{\label{tab:rescaling_results}Average accuracy of the DNN when the data is rescaled with different methods.}
+\end{table}
+
+From Table \ref{tab:rescaling_results} we can observe that the best results are obtained using standardization with stabilization factor $\epsilon = 100$ or the \emph{min-max} normalization in the range $[0, 1]$. These two methods lead to an additional $7\%$ accuracy comparing to the ones obtained without feature scaling.
+
+
+\vspace{7pt}
+
+\paragraph{\textbf{Weights initialization - }} The same method of inquiry can be applied to several weights initialization. As a result (see attached Jupyter notebook), we see that an accuracy $>98\%$ is achieved by the Keras built-in modules \texttt{random\_normal}, \texttt{truncated\_normal}, \texttt{glorot\_normal}, \texttt{orthogonal} and \texttt{variance\_scaling}. We also notice that there exists trivial initialize modules (\texttt{ones}, \texttt{zeros}, \texttt{constant}) which ultimately lead to bad DNN models (accuracy $\sim 55\%$).
+
+%\begin{table}[]
+%\begin{tabular}{ccc}
+%\hline
+%Method                          & Train acc, & Validation acc. \\ \hline
+%random\_normal                  & 0.9825     & 0.9887          \\
+%random\_uniform                 & 0.9241     & 0.9275          \\
+%truncated\_normal               & 0.9809     & 0.9887          \\
+%zeros                           & 0.5375     & 0.5750          \\
+%ones                            & 0.5375     & 0.5738          \\
+%glorot\_normal                  & 0.9847     & 0.9887          \\
+%glorot\_uniform (default Keras) & 0.9262     & 0.9287          \\
+%he\_normal                      & 0.9272     & 0.9312          \\
+%he\_uniform                     & 0.9247     & 0.9287          \\
+%identity                        & 0.8541     & 0.9350          \\
+%orthogonal                      & 0.9862     & 0.9912          \\
+%constant                        & 0.5375     & 0.5750          \\
+%variance\_scaling               & 0.9875     & 0.9987          \\ \hline
+%\end{tabular}
+%\caption{\label{tab:weight_init_results}Average accuracy of the DNN when the weights are initialized with different methods.}
+%\end{table}

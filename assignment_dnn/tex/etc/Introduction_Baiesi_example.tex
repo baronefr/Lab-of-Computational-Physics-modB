@@ -1,0 +1,50 @@
+The main purpose of this assignment is to simulate the writing of a short paper, to train the writing skills and the capability to explain a subject with effective simple sentences and a logic chain.
+
+The topic of your assignment is specified in the table at the end of this document.
+It requires you to describe your findings in one of the exercises.
+
+In this introduction,
+you should describe the main topic in general terms, introducing what you want to discover, why, and which
+methods you use do perform this study.
+There could also be citations like this \cite{pap1} to papers, websites, etc. forming the list of references that other people could be interested in consulting for a better understanding your points.
+
+\paragraph{\bf Tips}
+\begin{itemize}
+\item In English use sentences shorter than what you might normally be using in Italian, German, etc...
+\item Possibly, Explain concepts at a level which is accessible to everybody.
+\item Do not use colloquial forms in scientific writing, thus avoid it's, aren't, don't, etc.
+\item Do not change the time of verbs; it is simpler to speak in simple present, however also writing always in past tense is fine.
+\item In figures, use fonts that match the \underline{size} of the main text fonts (tiny fonts should be avoided). Use lines with different dashing, color, and symbol as appropriate for better distinguishing the curves. Use log scale when it is better for highlighting smaller scales or flattening larger scales. 
+\item Remember the grid explained in the intro video of the course, which will be used for evaluations. It contains suggestions for improving the text.
+\end{itemize}
+
+
+
+
+\paragraph{\bf Latex --}
+
+This text is compiled with the command \texttt{pdflatex} and is based on \texttt{revtex}.
+
+Packages (of which, maybe not all are needed) in arch Linux, and derivatives as Manjaro, may be installed via\\
+\texttt{
+  sudo pacman -S texlive-core texlive-bibtexextra texlive-fontsextra  texlive-formatsextra texlive-latexextra texlive-pictures texlive-pstricks texlive-publishers  texlive-science}
+
+\vspace{0.2cm}
+In Ubuntu there is a similar installation with \texttt{sudo apt install}, maybe \texttt{sudo apt install texlive-full} if you want to lose less time to pick the right packages. Similar tools should be available in Windows and via e.g.~macports on Mac OS.
+
+%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[!tb]
+  \centering
+  \includegraphics[width=0.3\textwidth]{fig1a.png}
+  \hskip 1mm
+  \includegraphics[width=0.3\textwidth]{fig1a.png}
+  \hskip 1mm
+  \includegraphics[width=0.3\textwidth]{fig1a.png}
+  \vskip 1mm
+  \includegraphics[width=0.455\textwidth]{fig1a.png}
+  \hskip 1mm
+  \includegraphics[width=0.455\textwidth]{fig1a.png}
+  \caption{Description of the panels: (a)..... (b)... etc. This caption should give enough info on the content of figures to make them mostly readable without consulting the main text. However, repetitions with the main text should e avoided if possible. {\color{red} If this format is difficult to frame in the page you want, just break it into multiple single figures.}}
+  \label{fig:x}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%

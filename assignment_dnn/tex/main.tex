@@ -1,0 +1,47 @@
+\documentclass[twocolumn]{revtex4-1}  % prl
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{latexsym,amsmath}
+
+\graphicspath{{img/}}
+\usepackage[font=small]{caption}
+
+\definecolor{linkcolor}{rgb}{0.75,0,0}
+\usepackage[pdftex,colorlinks=true, pdfstartview=FitV, linkcolor= linkcolor, citecolor= linkcolor, urlcolor= linkcolor, hyperindex=true,hyperfigures=true]{hyperref}
+
+\begin{document}
+
+\title{Group 02 - Tuning a simple Deep Neural Network}
+
+\author{Francesco Pio Barone}
+\author{Gianmarco Nagaro Quiroz}
+\author{Daniele Ninni}
+\author{Lorenzo Valentini}
+
+\date{\today}
+
+\begin{abstract}
+\input{text/abstract}
+\end{abstract}
+
+\maketitle
+
+\input{text/introduction}
+
+\input{text/methods}
+\input{text/sec_01}
+\input{text/sec_02}
+\input{text/sec_03}
+\input{text/sec_04}
+
+\input{text/conclusions}
+
+\bibliography{refs.bib}
+
+%\par\noindent\rule{\columnwidth}{0.4pt}
+%\textbf{Attached documents} - \texttt{2202\_assignment.ipynb}
+
+\clearpage
+\end{document}

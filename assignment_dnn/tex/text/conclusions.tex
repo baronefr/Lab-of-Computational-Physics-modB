@@ -1,0 +1,5 @@
+\section{Conclusions}
+
+The tweaked model of Table \ref{tab:best_model} proves to be effective when trained on more complex data patterns, but only if it is trained for a sufficient number of epochs ($\sim 1200$). On separate trials, we also observe that the convergence speed of the DNN crucially improves if we add an additional layer of 20 neurons, for a total of 3 hidden layers. In this scenario, the number of epochs required to achieve a target accuracy of $95\%$ is drastically reduced to $\sim 300$ epochs.
+
+This result confirms what we expect from the theory on the \emph{expressive power of neural networks} \cite{MLbook}: in order to express two or more convex polygons (2D) with $k-1$ faces, a minimum of $3$ layers is required, with at least $k$ neurons per layer. For this reason, if we use less than three layers, the training is more prone to optimization issues and will require more epochs to maximize the accuracy. On the other hand, DNN models with more than 3 layers do not show a significant accuracy boost. Moreover, reducing the number of neurons would reduce the model ability of learning curved shapes.
